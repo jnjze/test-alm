@@ -1,0 +1,9 @@
+<navbar-comp></navbar-comp>
+<div class="row">
+    <div class="col-sm-3">
+        <filter-comp  (result)="capturarDatos($event)" ></filter-comp>
+    </div>
+    <div class="col-sm-9">
+        <app-hotel [entrada]='resultados'> </app-hotel>
+    </div>
+</div>

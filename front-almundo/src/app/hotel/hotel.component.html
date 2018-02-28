@@ -1,0 +1,44 @@
+<!-- Seccion de hoteles -->
+<div style="margin-top: 30px; margin-right: 30px" *ngFor="let hotel of hotels">
+  <div class="card" style="border-radius: 0; box-shadow: 0 2px 5px 0 rgba(0,0,0,0.12)">
+    <div class="card-body">
+      <div class="row">
+        <div class="col-lg-4">
+          <div style="margin-top: 10px; margin-bottom: 10px" class="text-center col-sm-12">
+            <img class="img-fluid" src="../../../assets/images/hotels/{{hotel.image}}">
+          </div>
+        </div>
+        <div class="col-lg-5">
+          <div>
+            <span class="color-title">{{hotel.name}}</span>
+          </div>
+          <div>
+            <span *ngFor="let item of getStarts(hotel.stars)">
+              <img height="20" width="20" class="star" />
+            </span>
+          </div>
+          <div style="margin-top: 5px">
+            <span style="padding: 5px" *ngFor="let icono of hotel.amenities">
+              <img class="icono-amenities" src="./assets/icons/amenities/{{icono}}.svg" />
+            </span>
+          </div>
+        </div>
+        <div class="vertical-divider hidden-xs-down hidden-sm-down hidden-md-down"></div>
+        <div class="col-lg-1 aligner" style="margin: 0 20px 0 50px">
+          <div >
+            <div class="label-comp">
+              <span>{{label}}</span>
+            </div>
+            <div style="display: inline-table">
+              <span class="currency">{{currency}}</span>
+              <span class="price">{{hotel.price}}</span>
+            </div>
+            <div>
+              <button class="btn btn-lg button-comp btn-block">{{button}}</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,80 @@
+.color-title {
+    color:#1179B3;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.icono-star {
+    fill: #D4C03E;
+    margin: 0;
+    display:inline-block;
+    height: 18px;
+    float:none; 
+}
+
+.icono-amenities {
+    color: black;
+    margin: 0;
+    display:inline-block;
+    height: 18px;
+    float:none;
+}
+
+.currency {
+    color :#ED8216;
+    font-size: large; 
+    font-size: 2em;
+}
+
+.price {
+    color :#ED8216;
+    font-size: 2.5em;
+    font-weight: bold;
+}
+
+.label-comp {
+    color : gray;
+    text-align: center;
+    width: 150px;
+    margin-left: 20px;
+}
+
+.button-comp {
+    color: white;
+    text-align: center;
+    background:#0E3E7C
+}
+
+.vertical-divider {
+    position: absolute;
+    z-index: 10;
+    top: 4%;
+    left: 70%;
+    margin: 0;
+    padding: 0;
+    width: auto;
+    height: 100%;
+    line-height: 0;
+    text-align:center;
+    text-transform: uppercase;
+    transform: translateX(-50%);
+  }
+  
+  .vertical-divider:before, 
+  .vertical-divider:after {
+    position: absolute;
+    left: 50%;
+    content: '';
+    z-index: 9;
+    border-left: 1px dotted rgba(34,36,38,.15);
+    border-right: 1px dotted rgba(255,255,255,.1);
+    width: 0;
+    height: calc(100% - 1rem);
+  }
+
+.aligner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  

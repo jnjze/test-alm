@@ -1,0 +1,40 @@
+<div style="margin-top: 30px; margin-left: 30px">
+    <div class="card" style=" padding: 10px; border-radius: 0; box-shadow: 0 2px 5px 0 rgba(0,0,0,0.12)">
+        <span style="font-weight: bold; color:#444444; font-size: 1.3em">Filtros</span>
+    </div>
+</div>
+<div style="margin-top: 5px; margin-left: 30px">
+    <div class="card" style=" padding: 10px; border-radius: 0; box-shadow: 0 2px 5px 0 rgba(0,0,0,0.12)">
+        <div style="display:inline-block">
+            <img height="20" width="20" class="search-blue">
+            <span class="color-filter-header">Nombre de hotel</span>
+            <div class="arrow-up"></div>
+        </div>
+        <div style="margin-top:20px">
+            <input style="border-radius: 3px; height: 40px" type="text" [(ngModel)]="nombre" placeholder="Ingrese el nombre del hotel" class="col-lg-8"> 
+            <button (click)='buscar()' class="btn btn-sm" style="background-color: #002979;margin-left:10px;height: 40px;border-radius: 5px; color:white; font-weight: bold">Aceptar</button>
+        </div>
+    </div>
+</div>
+<div style="margin-top: 5px; margin-left: 30px">
+    <div class="card" style=" padding: 10px; border-radius: 0; box-shadow: 0 2px 5px 0 rgba(0,0,0,0.12)">
+        <div style="display:inline-block">
+            <img height="20" width="20" class="star-blue">
+            <span class="color-filter-header">Estrellas</span>
+            <div class="arrow-up"></div>
+            <br>
+            <div style="margin-top:20px; ">
+                <div style="padding: 10px">
+                    <input type="checkbox">
+                    <span style="font-weight: bold">Todas las estrellas</span>
+                </div>
+                <div *ngFor="let check of checkbox" style="padding:10px">
+                    <input type="checkbox" [(ngModel)]="check.valor" [value]="check.nombre">
+                    <span *ngFor="let item of getStarts(check.nombre)">
+                        <img height="20" width="20" class="star"/>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
